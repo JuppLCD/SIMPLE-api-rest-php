@@ -1,0 +1,56 @@
+@url=http://localhost/Proyectos/PRIMER-API-REST/api
+@token="22e5a9449278e02ba3a7c10f8d13686c"
+
+#-----------------------------------------------------
+### Crear paciente
+POST {{url}}/pacientes
+Content-Type: application/json
+
+{
+"nombre" : "pepe",
+"dni" : "101",
+"correo":"pasiente@pasiente.com",
+"codigoPostal" :"420",
+"genero" : "M",
+"telefono" : "0165168",
+"fechaNacimiento" : "1900/08/10",
+"token" : {{token}}
+}
+
+# "nombre" : "", -> REQUERIDO
+# "dni" : "", -> REQUERIDO
+# "correo":"", -> REQUERIDO
+# "token" : "", -> REQUERIDO
+
+#-----------------------------------------------------
+### Update paciente
+PUT {{url}}/pacientes
+Content-Type: application/json
+
+{
+"nombre" : "",
+"dni" : "",
+"correo":"",
+"codigoPostal" :"",
+"genero" : "",
+"telefono" : "",
+"fechaNacimiento" : "",
+"token" : {{token}},
+"pacienteId" : ""
+}
+
+# "token" : "" , -> REQUERIDO
+# "pacienteId" : "" -> REQUERIDO
+
+#-----------------------------------------------------
+### Borrar un pasiente
+DELETE {{url}}/pacientes
+Content-Type: application/json
+
+{
+"pacienteId" : "6",
+"token" : {{token}}
+}
+
+# "token" : "", -> REQUERIDO
+# "pacienteId" : "" -> REQUERIDO

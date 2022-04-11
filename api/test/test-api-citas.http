@@ -1,0 +1,55 @@
+@url=http://localhost/Proyectos/PRIMER-API-REST/api/citas
+@token="22e5a9449278e02ba3a7c10f8d13686c"
+
+#-----------------------------------------------------
+### Crear cita
+POST {{url}}
+Content-Type: application/json
+
+{
+"pacienteId" : "8",
+"fecha" : "2022/10/10",
+"horaInicio":"10:20",
+"motivo" : "Dolor de cabeza v3",
+"estado" : "Confirmado",
+"token" : {{token}}
+}
+
+# "pacienteId" : "", -> REQUERIDO
+# "fecha" : "", -> REQUERIDO
+# "horaInicio":"", -> REQUERIDO
+# "motivo" : "", -> REQUERIDO
+
+
+#-----------------------------------------------------
+### Update cita
+PUT {{url}}
+Content-Type: application/json
+
+{
+"nombre" : "",
+"dni" : "",
+"correo":"",
+"codigoPostal" :"",
+"genero" : "",
+"telefono" : "",
+"fechaNacimiento" : "",
+"token" : {{token}},
+"pacienteId" : ""
+}
+
+# "token" : "" , -> REQUERIDO
+# "citaID" : "" -> REQUERIDO
+
+#-----------------------------------------------------
+### Borrar un cita
+DELETE {{url}}
+Content-Type: application/json
+
+{
+"pacienteId" : "",
+"token" : {{token}}
+}
+
+# "token" : "", -> REQUERIDO
+# "citaID" : "" -> REQUERIDO

@@ -1,0 +1,22 @@
+@url=http://localhost/Proyectos/PRIMER-API-REST/api
+
+#-----------------------------------------------------
+### Register
+POST {{url}}/register
+Content-Type: application/json
+
+{
+    "usuario": "lolo3@email.com",
+    "password": "lolo123",
+    "passwordConfirm": "lolo123"
+}
+
+#-----------------------------------------------------
+### Login
+POST {{url}}/auth
+Content-Type: application/json
+
+{
+    "usuario": "lolo@email.com",
+    "password": "lolo123"
+}
